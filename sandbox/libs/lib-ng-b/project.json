@@ -1,0 +1,26 @@
+{
+  "name": "lib-ng-b",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib-ng-b/src",
+  "prefix": "lego",
+  "tags": ["lib:frontend"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/lib-ng-b/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/lib-ng-b/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/lib-ng-b/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}
