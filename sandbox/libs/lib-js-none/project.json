@@ -1,8 +1,0 @@
-{
-  "name": "lib-js-none",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/lib-js-none/src",
-  "projectType": "library",
-  "targets": {},
-  "tags": ["lib:js"]
-}
