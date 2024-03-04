@@ -162,6 +162,9 @@
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
+    },
+    "server": {
+      "cache": true
     }
   }
 }
