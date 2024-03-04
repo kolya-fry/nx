@@ -1,0 +1,9 @@
+{
+  "name": "lib-ng-nb",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib-ng-nb/src",
+  "prefix": "lego",
+  "tags": ["lib:frontend"],
+  "projectType": "library",
+  "targets": {}
+}
