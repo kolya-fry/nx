@@ -1,0 +1,9 @@
+{
+  "name": "lib-node-tsc-nb",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib-node-tsc-nb/src",
+  "projectType": "library",
+  "tags": ["lib:backend"],
+  "// targets": "to see all targets run: nx show project lib-node-tsc-nb --web",
+  "targets": {}
+}
