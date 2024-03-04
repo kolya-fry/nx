@@ -1,0 +1,15 @@
+#!/bin/bash
+
+BRANCH=main
+
+git checkout $BRANCH
+
+./node_modules/.bin/create-nx-workspace  -g  --preset=angular-monorepo  --name=app-webpack-csr      --appName=app-webpack-csr      --workspaceType=integrated  --ci=skip  --e2eTestRunner=none  --style=scss   --bundler=webpack  --ssr=false  && git status && git add -A && git commit -m "feat(repo): new monorepo - app-webpack-csr"
+./node_modules/.bin/create-nx-workspace  -g  --preset=angular-monorepo  --name=app-webpack-ssr      --appName=app-webpack-ssr      --workspaceType=integrated  --ci=skip  --e2eTestRunner=none  --style=scss   --bundler=webpack  --ssr=true   && git status && git add -A && git commit -m "feat(repo): new monorepo - app-webpack-ssr"
+./node_modules/.bin/create-nx-workspace  -g  --preset=angular-monorepo  --name=app-esbuild-csr      --appName=app-esbuild-csr      --workspaceType=integrated  --ci=skip  --e2eTestRunner=none  --style=scss   --bundler=esbuild  --ssr=false  && git status && git add -A && git commit -m "feat(repo): new monorepo - app-esbuild-csr"
+./node_modules/.bin/create-nx-workspace  -g  --preset=angular-monorepo  --name=app-esbuild-ssr      --appName=app-esbuild-ssr      --workspaceType=integrated  --ci=skip  --e2eTestRunner=none  --style=scss   --bundler=esbuild  --ssr=true   && git status && git add -A && git commit -m "feat(repo): new monorepo - app-esbuild-ssr"
+./node_modules/.bin/create-nx-workspace  -g  --preset=express           --name=api-express-webpack  --appName=api-express-webpack  --workspaceType=integrated  --ci=skip  --e2eTestRunner=none  --docker=true  --bundler=webpack               && git status && git add -A && git commit -m "feat(repo): new monorepo - api-express-webpack"
+./node_modules/.bin/create-nx-workspace  -g  --preset=express           --name=api-express-esbuild  --appName=api-express-esbuild  --workspaceType=integrated  --ci=skip  --e2eTestRunner=none  --docker=true  --bundler=esbuild               && git status && git add -A && git commit -m "feat(repo): new monorepo - api-express-esbuild"
+./node_modules/.bin/create-nx-workspace  -g  --preset=nest              --name=api-nest-webpack     --appName=api-nest-webpack     --workspaceType=integrated  --ci=skip  --e2eTestRunner=none  --docker=true  --bundler=webpack               && git status && git add -A && git commit -m "feat(repo): new monorepo - api-nest-webpack"
+./node_modules/.bin/create-nx-workspace  -g  --preset=nest              --name=api-nest-esbuild     --appName=api-nest-esbuild     --workspaceType=integrated  --ci=skip  --e2eTestRunner=none  --docker=true  --bundler=esbuild               && git status && git add -A && git commit -m "feat(repo): new monorepo - api-nest-esbuild"
+./node_modules/.bin/create-nx-workspace  -g  --preset=apps              --name=sandbox                                             --workspaceType=integrated  --ci=skip                                                                       && git status && git add -A && git commit -m "feat(repo): new monorepo - sandbox"
