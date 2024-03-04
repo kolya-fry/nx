@@ -1,0 +1,9 @@
+{
+  "name": "hello",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/hello/src",
+  "prefix": "lego",
+  "tags": ["lib:frontend"],
+  "projectType": "library",
+  "targets": {}
+}
