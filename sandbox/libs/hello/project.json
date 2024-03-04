@@ -1,0 +1,21 @@
+{
+  "name": "hello",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/hello/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/hello",
+        "main": "libs/hello/src/index.ts",
+        "tsConfig": "libs/hello/tsconfig.lib.json",
+        "assets": ["libs/hello/*.md"],
+        "generatePackageJson": true,
+        "format": ["cjs"]
+      }
+    }
+  },
+  "tags": ["lib:js"]
+}
