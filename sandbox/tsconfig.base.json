@@ -20,6 +20,7 @@
       "@sandbox/lib-js-swc": ["libs/lib-js-swc/src/index.ts"],
       "@sandbox/lib-js-tsc": ["libs/lib-js-tsc/src/index.ts"],
       "@sandbox/lib-ng-b": ["libs/lib-ng-b/src/index.ts"],
+      "@sandbox/lib-ng-nb": ["libs/lib-ng-nb/src/index.ts"],
       "@sandbox/lib-node-swc-b": ["libs/lib-node-swc-b/src/index.ts"],
       "@sandbox/lib-node-swc-nb": ["libs/lib-node-swc-nb/src/index.ts"],
       "@sandbox/lib-node-tsc-b": ["libs/lib-node-tsc-b/src/index.ts"],
