@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@sandbox/lib-js-esbuild": ["libs/lib-js-esbuild/src/index.ts"],
       "@sandbox/lib-js-none": ["libs/lib-js-none/src/index.ts"],
       "@sandbox/lib-js-swc": ["libs/lib-js-swc/src/index.ts"],
       "@sandbox/lib-js-tsc": ["libs/lib-js-tsc/src/index.ts"]
