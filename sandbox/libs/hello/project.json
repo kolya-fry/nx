@@ -1,0 +1,26 @@
+{
+  "name": "hello",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/hello/src",
+  "prefix": "lego",
+  "tags": ["lib:frontend"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/hello/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/hello/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/hello/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}
