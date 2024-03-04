@@ -1,0 +1,19 @@
+{
+  "name": "lib-js-tsc",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib-js-tsc/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/lib-js-tsc",
+        "main": "libs/lib-js-tsc/src/index.ts",
+        "tsConfig": "libs/lib-js-tsc/tsconfig.lib.json",
+        "assets": ["libs/lib-js-tsc/*.md"]
+      }
+    }
+  },
+  "tags": ["lib:js"]
+}
