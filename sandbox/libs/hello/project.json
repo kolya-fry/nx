@@ -1,0 +1,20 @@
+{
+  "name": "hello",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/hello/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/hello",
+        "tsConfig": "libs/hello/tsconfig.lib.json",
+        "packageJson": "libs/hello/package.json",
+        "main": "libs/hello/src/index.ts",
+        "assets": ["libs/hello/*.md"]
+      }
+    }
+  },
+  "tags": ["lib:backend"]
+}
