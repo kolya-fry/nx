@@ -1,0 +1,24 @@
+{
+  "name": "api-nest-esbuild",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/api-nest-esbuild/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "api-nest-esbuild:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "api-nest-esbuild:build:development"
+        },
+        "production": {
+          "buildTarget": "api-nest-esbuild:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
