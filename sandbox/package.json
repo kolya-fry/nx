@@ -4,10 +4,13 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
   "devDependencies": {
     "@nx/js": "18.1.0",
+    "@nx/web": "18.1.0",
+    "@nx/webpack": "^18.1.0",
     "@nx/workspace": "18.1.0",
-    "nx": "18.1.0"
-  }
+    "nx": "18.1.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {}
 }
