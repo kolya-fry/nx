@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NX=18.0.6
-BRANCH=main
+NX=18.1.0
+BRANCH=v-18-1-0
 
 git checkout $BRANCH
 

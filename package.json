@@ -1,8 +1,8 @@
 {
   "name": "nx-sandbox",
   "dependencies": {
-    "create-nx-workspace": "18.0.6",
-    "nx": "18.0.6"
+    "create-nx-workspace": "18.1.0",
+    "nx": "18.1.0"
   },
   "engines": {
     "node": "18.19.1",
