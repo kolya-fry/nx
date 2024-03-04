@@ -1,0 +1,8 @@
+{
+  "name": "lib-node-tsc-nb",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib-node-tsc-nb/src",
+  "projectType": "library",
+  "targets": {},
+  "tags": ["lib:backend"]
+}
