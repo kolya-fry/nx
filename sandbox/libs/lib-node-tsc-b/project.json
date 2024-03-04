@@ -1,0 +1,20 @@
+{
+  "name": "lib-node-tsc-b",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib-node-tsc-b/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/lib-node-tsc-b",
+        "tsConfig": "libs/lib-node-tsc-b/tsconfig.lib.json",
+        "packageJson": "libs/lib-node-tsc-b/package.json",
+        "main": "libs/lib-node-tsc-b/src/index.ts",
+        "assets": ["libs/lib-node-tsc-b/*.md"]
+      }
+    }
+  },
+  "tags": ["lib:backend"]
+}
