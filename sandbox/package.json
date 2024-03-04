@@ -5,9 +5,11 @@
   "scripts": {},
   "private": true,
   "devDependencies": {
+    "@nestjs/schematics": "^10.0.1",
     "@nx/esbuild": "^18.1.0",
     "@nx/jest": "^18.1.0",
     "@nx/js": "^18.1.0",
+    "@nx/nest": "^18.1.0",
     "@nx/node": "^18.1.0",
     "@nx/web": "^18.1.0",
     "@nx/webpack": "^18.1.0",
@@ -20,5 +22,6 @@
     "nx": "18.1.0",
     "prettier": "^2.6.2",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "dependencies": {}
 }
