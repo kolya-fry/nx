@@ -1,0 +1,82 @@
+{
+  "name": "app-esbuild-csr",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "lego",
+  "sourceRoot": "apps/app-esbuild-csr/src",
+  "tags": ["app:frontend"],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/app-esbuild-csr",
+        "index": "apps/app-esbuild-csr/src/index.html",
+        "browser": "apps/app-esbuild-csr/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/app-esbuild-csr/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/app-esbuild-csr/src/favicon.ico",
+          "apps/app-esbuild-csr/src/assets"
+        ],
+        "styles": ["apps/app-esbuild-csr/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "port": -1
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "app-esbuild-csr:build:production"
+        },
+        "development": {
+          "buildTarget": "app-esbuild-csr:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "app-esbuild-csr:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/app-esbuild-csr/jest.config.ts"
+      }
+    }
+  }
+}
