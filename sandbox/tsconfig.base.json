@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@sandbox/lib-js-none": ["libs/lib-js-none/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
