@@ -1,0 +1,20 @@
+{
+  "name": "lib-node-swc-b",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib-node-swc-b/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/lib-node-swc-b",
+        "tsConfig": "libs/lib-node-swc-b/tsconfig.lib.json",
+        "packageJson": "libs/lib-node-swc-b/package.json",
+        "main": "libs/lib-node-swc-b/src/index.ts",
+        "assets": ["libs/lib-node-swc-b/*.md"]
+      }
+    }
+  },
+  "tags": ["lib:backend"]
+}
